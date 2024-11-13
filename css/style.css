@@ -1,3 +1,4 @@
+/* Reset de márgenes y bordes */
 * {
     margin: 0;
     padding: 0;
@@ -5,16 +6,18 @@
 }
 
 body {
-    background-image: url('../img/El-Barber-Pole-contemporaneo.webp');
+    background-image: url('../img/60cc87af46fc80951f8b4fac_barber-pole.jpg');
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
+    color: rgb(248, 247, 247);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: white;
+    min-height: 100vh;
+    position: relative;
 }
+
 body::before {
     content: "";
     position: absolute;
@@ -22,79 +25,53 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../img/El-Barber-Pole-contemporaneo.webp');
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px); /* Ajusta el nivel de difuminado según tu preferencia */
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    display: none; /* Se muestra solo en dispositivos móviles */
 }
 
+/* Contenedor principal */
 .container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos columnas */
     width: 100%;
     max-width: 1200px;
-   /* background-color: rgba(0, 0, 0, 0.7);*/
-    border-radius: 10px;
-    overflow: hidden;
+    padding: 20px;
+    z-index: 1;
 }
 
-.left-section,
-.right-section {
-    flex: 1;
-    padding: 20px;
+/* Sección izquierda */
+.left-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.shop-name {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 1.8rem;
-    color: white;
-}
-
-.instagram-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: linear-gradient(45deg, #f09433, #eb6b3c, #dc2743, #c91b78, #6623d1);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.instagram-button:hover {
-    background: linear-gradient(45deg, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+    align-items: flex-start; /* Alinea el contenido ligeramente hacia la izquierda */
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center; /* Alinea el texto a la izquierda */
+    margin-left: -5px; /* Ajuste fino para mover toda la columna un poco hacia la izquierda */
 }
 
 
 .logo-container {
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 .logo {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 5rem;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .slogan {
-    font-size: 2rem;
-    margin: 10px 0;
+    font-size: 1.2rem;
     color: #fffbfb;
 }
 
@@ -106,30 +83,117 @@ h2 {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 10px;
 }
+.download-btn {
+    background-color: #080808;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    display: right;
+    align-items: center;
+}
+
+.download-btn .icon {
+    width: 24px; /* Tamaño de la imagen */
+    height: 24px;
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
 
 .download-button:hover {
     background-color: #0056b3;
 }
 
-.phone-image {
-    width: 100%;
-    max-width: 600px;
-    align-self: center;
+/* Redes Sociales */
+.redes {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
 }
 
+.redes .icon {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.redes .icon:hover {
+    background: #555;
+}
+
+.redes .tooltip {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    font-size: 14px;
+    background: #E4405F;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.redes .icon:hover .tooltip {
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .terms-link {
+    color: #ccc;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.footer .terms-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
+    body::before {
+        display: block;
+    }
+
     .container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .redes {
+        position: static;
+        margin: 10px 0;
     }
 
     .shop-name,
     .instagram-button {
-        position: static;
         margin: 10px 0;
     }
 }
-.shop-name {
-    font-size: 2.5rem; /* Ajusta el tamaño según tu preferencia */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
-}
+
