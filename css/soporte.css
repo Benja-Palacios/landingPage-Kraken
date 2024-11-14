@@ -1,0 +1,148 @@
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #06152a; /* Azul principal */
+    color: white;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Sección de contenido principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 24px;
+    color: #06152a;
+    margin-bottom: 20px;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+/* Estilos de preguntas frecuentes */
+#faq details {
+    margin: 10px 0;
+    background-color: #f0f8ff; /* Azul claro para fondo */
+    padding: 10px;
+    border: 1px solid #d0e7ff;
+    border-radius: 5px;
+}
+
+#faq summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #06152a;
+}
+
+#faq p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Estilos de formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d0e7ff;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #06152a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #02101e; /* Azul más oscuro para el efecto hover */
+}
+
+/* Soporte Técnico */
+#technical-support p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* Estado del Servicio */
+#status ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#status li {
+    background-color: #f0f8ff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #d0e7ff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Pie de página */
+footer {
+    background-color: #06152a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p, footer a {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #d0e7ff; /* Azul claro */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
